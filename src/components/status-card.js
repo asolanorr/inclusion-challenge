@@ -35,7 +35,7 @@ const StatusCard = ({ url }) => {
     return (
       <div className='card' key={data.time}>
         <p className='title'>{data.hostname}</p>
-        {data.message.includes('Healthy') ? <p>Healthy! <span className='healthy-dot'></span> :)</p> : <p>Outage! <span className='unhealthy-dot'></span>:(</p>}
+        {data.message ? data.message.includes('Healthy') ? <p>Healthy! <span className='healthy-dot'></span> :)</p> : <p>Outage! <span className='unhealthy-dot'></span>:(</p> : null}
         <p>{date}</p>
         <p>{data.version}</p>
       </div>
