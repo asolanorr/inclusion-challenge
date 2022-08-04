@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import StatusCard from "./components/status-card"
 
 function App() {
+  const listOfAPIs = ['accounts', 'assets', 'customers', 'datapoints', 'devices', 'documents', 'forms', 'invites', 'media', 'messages', 'namespaces', 'orders', 'patients', 'relationships', 'rules', 'templates', 'users', 'workflows']
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      {listOfAPIs.map(apiName => {
+        return <StatusCard key={apiName} url={apiName} />
+      })}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

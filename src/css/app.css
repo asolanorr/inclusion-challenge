@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      ". . ."
+      ". . ."
+      ". . ."; 
+    background-color: #f7f7f7;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 10px 10px; 
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.card .title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card .healthy-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: green;
+  margin: 2px 5px;
+}
+
+.card .unhealthy-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 2px 5px;
+}
